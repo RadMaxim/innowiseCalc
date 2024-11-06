@@ -12,6 +12,9 @@
   --color-darkGrayActiveOrHover: #565656;
   --color-lightGary: #aeaeae;
   --color-lightGaryActiveOrHover: #858585;
+  --color-lightGaryModeL: #d9d9d9;
+  --color-darkGrayModeL: #d9d9d9;
+  --color-back-calcModeL: #4a4a4a;
 }
 @font-face {
   font-family: Roboto;
@@ -177,4 +180,13 @@ footer {
 #result {
   color: var(--color-number);
   font-size: 48px;
+}
+.light,.lightB{
+    transition: .7s ease-in-out;
+}
+input[id="light"]:checked ~ .main_container .light {
+  background-color: var(--color-back-calcModeL) !important;
+}
+input[id="light"]:checked ~ .main_container .lightB {
+  background: var(--color-darkGrayModeL) !important;
 }
