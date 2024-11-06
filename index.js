@@ -2,7 +2,8 @@ window.addEventListener("load",()=>{
     let res = document.getElementById("result")
     let btns =  document.querySelectorAll(".btn");
     for (const btn of btns) {
-        btn.addEventListener("click",(e)=>{
+        
+        btn.addEventListener("touchstart",(e)=>{
             let symb = e.currentTarget.getAttribute("aria-c")
             // console.log();
             res.innerText+=symb;
