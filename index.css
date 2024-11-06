@@ -95,6 +95,8 @@ footer {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none;
 }
 
 .orangeBtn {
@@ -183,6 +185,20 @@ footer {
 }
 .light,.lightB{
     transition: .7s ease-in-out;
+}
+input[type="radio"]{
+    display: none;
+}
+input[id="dark"] ~ label, input[id="light"] ~ label{
+    background-color: var(--color-button);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+input[id="dark"]:checked ~ label{
+        background-color: var(--color-button-active);
+}
+input[id="light"]:checked ~ label{
+    background-color: var(--color-button-active);
 }
 input[id="light"]:checked ~ .main_container .light {
   background-color: var(--color-back-calcModeL) !important;
