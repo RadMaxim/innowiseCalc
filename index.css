@@ -206,3 +206,6 @@ input[id="light"]:checked ~ .main_container .light {
 input[id="light"]:checked ~ .main_container .lightB {
   background: var(--color-darkGrayModeL) !important;
 }
+#test{
+    color: red !important;
+}
