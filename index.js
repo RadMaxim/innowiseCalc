@@ -5,7 +5,13 @@ window.addEventListener("load",()=>{
         
         btn.addEventListener("touchstart",(e)=>{
             let symb = e.currentTarget.getAttribute("aria-c")
-            // console.log();
+            console.log("touchstart");
+            res.innerText+=symb;
+            check(symb)
+        })
+        btn.addEventListener("click",(e)=>{
+            let symb = e.currentTarget.getAttribute("aria-c")
+            console.log("click");
             res.innerText+=symb;
             check(symb)
         })
