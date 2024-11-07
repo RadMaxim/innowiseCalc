@@ -29,7 +29,7 @@ function calculate() {
 
     }
     updateStates({
-        currentOp:reasult,
+        currentOp:reasult.toFixed(8),
         operation:"",
         prevOperation:""
     })

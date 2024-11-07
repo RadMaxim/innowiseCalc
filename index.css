@@ -97,6 +97,7 @@ footer {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent !important;
   outline: none;
+  user-select: none;
 }
 
 .orangeBtn {
@@ -216,10 +217,25 @@ input[id="light"]:checked ~ label{
 }
 input[id="light"]:checked ~ .main_container .light {
   background-color: var(--color-back-calcModeL) !important;
+
 }
 input[id="light"]:checked ~ .main_container .lightB {
   background: var(--color-darkGrayModeL) !important;
+  color: var(--color-back-calc) !important;
 }
 #test{
     color: red !important;
+}
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: var(--color-darkGrayModeL);
+  transition: .7s ease-in-out;
+}
+input[id="dark"]:checked ~ .background{
+  background-color: var(--color-button-active);
 }
