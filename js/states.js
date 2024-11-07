@@ -5,10 +5,7 @@ let allState = {
     
 }
 function updateStates(newStates) {
-    console.log(newStates);
-    
     allState = {...allState,...newStates}
-    console.log(allState);
     
 }
 export {updateStates, allState}

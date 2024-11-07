@@ -1,9 +1,6 @@
 import { allState, updateStates } from "./states.js";
 
 function appNumber(num) {
-    let val =String(allState.currentOp);
-    
-    if (num===val)updateStates({currentOp:"0"})
     
     if (num==="," && allState.currentOp.indexOf(',')>-1) return
     

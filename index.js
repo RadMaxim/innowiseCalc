@@ -2,6 +2,7 @@ import { appNumber } from "./js/appendNumber.js";
 import { calculate } from "./js/calculate.js";
 import { checkOperation } from "./js/checkOperation.js";
 import { clearOperations } from "./js/clear.js";
+import { allState, updateStates } from "./js/states.js";
 import { updateScreen } from "./js/updateScreen.js";
 
 window.addEventListener("load",()=>{
@@ -9,6 +10,11 @@ window.addEventListener("load",()=>{
     let operations = document.querySelectorAll("[aria-o]")
     let equalsBtn = document.querySelector("[aria-equals]")
     let clearOperation = document.querySelector("[aria-ac]")
+    let plusMinus = document.querySelector("[aria-plusMinus]")
+    plusMinus.addEventListener("click",()=>{
+        updateStates({currentOp:String(parseFloat(allState.currentOp)*(-1))})
+        updateScreen();
+    })
     clearOperation.addEventListener("click",()=>{
         clearOperations();
         updateScreen();
