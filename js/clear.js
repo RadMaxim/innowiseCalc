@@ -1,7 +1,14 @@
-function clearOperation() {
-    let res = document.getElementById("result")
-    res.innerText = "0"
+import {updateStates } from "./states.js"
+
+
+function clearOperations() {
+    
+    updateStates({
+        currentOp:"0",
+        operation:"",
+        prevOperation:""
+    })
 }
 
 
-export {clearOperation}
+export {clearOperations}
