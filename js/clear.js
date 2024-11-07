@@ -1,14 +1,11 @@
-import {updateStates } from "./states.js"
-
+import { updateStates } from "./states.js";
 
 function clearOperations() {
-    
-    updateStates({
-        currentOp:"0",
-        operation:"",
-        prevOperation:""
-    })
+  updateStates({
+    currentOp: "0",
+    operation: "",
+    prevOperation: "",
+  });
 }
 
-
-export {clearOperations}
+export { clearOperations };

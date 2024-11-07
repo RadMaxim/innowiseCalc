@@ -15,9 +15,9 @@
   --color-lightGaryModeL: #d9d9d9;
   --color-darkGrayModeL: #d9d9d9;
   --color-back-calcModeL: #4a4a4a;
-  --color-btn-close:red;
+  --color-btn-close: red;
   --color-btn-collapse: yellow;
-  --color-btn-any:green;
+  --color-btn-any: green;
 }
 @font-face {
   font-family: Roboto;
@@ -29,14 +29,14 @@ p {
   text-transform: uppercase;
   pointer-events: none;
 }
-h1{
+h1 {
   font-family: Roboto;
 }
 body {
   display: grid;
   grid-template-rows: 7vh 80vh 7vh;
   grid-template-columns: auto 95vw auto;
-  
+
   grid-template-areas: ". header ." ". main ." ". footer .";
   gap: 20px;
 }
@@ -55,32 +55,27 @@ main {
   grid-area: main;
   display: grid;
   grid-template-rows: 20px auto;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-areas: "dark light" "calc calc";
   gap: 20px;
-  
 }
-label[for="light"], label[for="dark"]{
+label[for="light"],
+label[for="dark"] {
   width: 200px;
   text-align: center;
   font-family: Roboto;
   -webkit-tap-highlight-color: transparent !important;
-
-
-
 }
-label[for="dark"]{
+label[for="dark"] {
   grid-area: dark;
-  
-  
-  
 }
-label[for="light"]{
+#test {
+  color: red;
+}
+label[for="light"] {
   grid-area: light;
- 
-  
 }
-.main_container{
+.main_container {
   grid-area: calc;
   display: flex;
   justify-content: center;
@@ -108,26 +103,22 @@ footer {
   gap: 10px;
   padding: 10px;
 }
-.calc_screen_button > label[for="close"],label[for="collapse"],label[for="any"] {
+.calc_screen_button > label[for="close"],
+label[for="collapse"],
+label[for="any"] {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   display: block;
 }
-label[for="close"]{
-
+label[for="close"] {
   background-color: var(--color-btn-close);
-
 }
-label[for="collapse"]{
-
+label[for="collapse"] {
   background-color: var(--color-btn-collapse);
-
 }
-label[for="any"]{
-
+label[for="any"] {
   background-color: var(--color-btn-any);
-
 }
 .calc_screen {
   grid-area: screen;
@@ -242,19 +233,19 @@ label[for="any"]{
 .calc_screen_container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "p1" "p2";
 }
-#test, #result{
-
+#test,
+#result {
   width: 100%;
   height: 100%;
   text-align: end;
 }
-#test{
+#test {
   grid-area: p1;
 }
-#result{
+#result {
   grid-area: p2;
 }
 
@@ -262,40 +253,40 @@ label[for="any"]{
   color: var(--color-number);
   font-size: 48px;
 }
-.light,.lightB{
-    transition: .7s ease-in-out;
+.light,
+.lightB {
+  transition: 0.7s ease-in-out;
 }
-input[type="radio"]{
-    display: none;
+input[type="radio"] {
+  display: none;
 }
-input[id="dark"] ~ label[for="dark"], input[id="light"] ~ label[for="light"]{
-    background-color: var(--color-button) ;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-transition: .7s ease-in-out;
-
+input[id="dark"] ~ label[for="dark"],
+input[id="light"] ~ label[for="light"] {
+  background-color: var(--color-button);
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  transition: 0.7s ease-in-out;
 }
 input[id="dark"]:checked ~ label[for="dark"],
-input[id="light"]:checked ~ label[for="light"]{
-        background-color: var(--color-button-active);
-        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
--moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+input[id="light"]:checked ~ label[for="light"] {
+  background-color: var(--color-button-active);
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
 input[id="light"]:checked ~ .main_container .light {
   background-color: var(--color-back-calcModeL);
-
 }
 input[id="light"]:checked ~ .main_container .lightB {
   background: var(--color-darkGrayModeL);
   color: var(--color-back-calc);
 }
 
-.background{
+.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -303,8 +294,8 @@ input[id="light"]:checked ~ .main_container .lightB {
   height: 100vh;
   z-index: -1;
   background-color: var(--color-darkGrayModeL);
-  transition: .7s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
-input[id="dark"]:checked ~ .background{
+input[id="dark"]:checked ~ .background {
   background-color: var(--color-button-active);
 }

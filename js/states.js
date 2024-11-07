@@ -1,11 +1,9 @@
 let allState = {
-    currentOp:"0",
-    operation:"",
-    prevOperation:""
-    
-}
+  currentOp: "0",
+  operation: "",
+  prevOperation: "",
+};
 function updateStates(newStates) {
-    allState = {...allState,...newStates}
-    
+  allState = { ...allState, ...newStates };
 }
-export {updateStates, allState}
+export { updateStates, allState };
