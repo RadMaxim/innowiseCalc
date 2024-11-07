@@ -1,51 +1,111 @@
+
+const allState = {
+    currentOp:"",
+    operation:"",
+    prevOperation:""
+    
+}
 window.addEventListener("load",()=>{
-    let res = document.getElementById("result")
-    let btns =  document.querySelectorAll(".btn");
-    for (const btn of btns) {
+    let btns =  document.querySelectorAll("[aria-n]");
+    let operations = document.querySelectorAll("[aria-o]")
+    let equalsBtn = document.querySelector("[aria-equals]")
+    console.log(equalsBtn);
+    
+    btns.forEach((elem)=>{
         
-        btn.addEventListener("touchstart",(e)=>{
-            let symb = e.currentTarget.getAttribute("aria-c")
-            console.log("touchstart");
-            res.innerText+=symb;
-            check(symb)
+        elem.addEventListener("click",(e)=>{
+            let num = e.currentTarget.innerText
+            
+            appNumber(num)
+            updateScreen()
         })
-        btn.addEventListener("click",(e)=>{
-            let symb = e.currentTarget.getAttribute("aria-c")
-            console.log("click");
-            res.innerText+=symb;
-            check(symb)
-        })
+    })
+    operations.forEach((elem)=>{
         
-    }
+        elem.addEventListener("click",(e)=>{
+            let operation = e.currentTarget.innerText
+            
+            checkOperation(operation)
+            updateScreen()
+        })
+    })
+    equalsBtn.addEventListener("click",()=>{
+    console.log("=");
+    
+        calculate();
+        updateScreen();
+    })
+    
+  
 
 
 })
-function check(sym) {
-    console.log("test");
+
+function appNumber(num) {
+    let res = document.getElementById("result");
+    let val =String(res.innerText);
     
+    if (num===val)allState.currentOp="0"
+    
+    if (num==="," && allState.currentOp.indexOf(',')>-1) return
+    
+    if (allState.currentOp==="0" && num!=",") allState.currentOp="";
+        
+
+    if (allState.currentOp==="0" && num==",")allState.currentOp="0";
+        
+    
+   allState.currentOp+=num 
+}
+function updateScreen() {
+    let res = document.getElementById("result");
     let test = document.getElementById("test")
-    console.log(test);
-    console.log(sym);
+    res.innerText = allState.currentOp
+    test.innerText = allState.prevOperation+allState.operation
+   
+}
+function checkOperation(operation) {
+    if (allState.currentOp==="") {
+        return
+    }
+    if (allState.prevOperation!=="") {
+        calculate()
+    }
+    allState.operation = operation;
+    allState.prevOperation = allState.currentOp;
+    allState.currentOp = ""; 
     
-    switch (sym) {
+}
+function calculate() {
+    let reasult =0;
+    let prev = parseFloat(allState.prevOperation);
+    let current = parseFloat(allState.currentOp);
+    if (isNaN(prev) || isNaN(current)) {
+        return
+    } 
+    switch (allState.operation) {
         case '+':
-            test.innerText="plus"
+            reasult = prev+current;
             break;
             case '-':
-            test.innerText="minus"
+                reasult = prev-current;
             break;
             case '/':
-              test.innerText="divided"
+                reasult = prev-current;
             break;
             case '%':
-             test.innerText="percent"
+                reasult = prev%current;
             break;
             case '*':
-             test.innerText="multiply"
+                reasult = prev*current;
             break;
             
         default:
-             test.innerText=""
-            break;
+             return; 
+
     }
+    allState.currentOp = reasult;
+    allState.operation="";
+    allState.prevOperation="";
+
 }

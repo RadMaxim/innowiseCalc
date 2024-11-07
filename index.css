@@ -175,10 +175,24 @@ footer {
   grid-area: btn19;
 }
 .calc_screen_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: "p1" "p2";
 }
+#test, #result{
+
+  width: 100%;
+  height: 100%;
+  text-align: end;
+}
+#test{
+  grid-area: p1;
+}
+#result{
+  grid-area: p2;
+}
+
 #result {
   color: var(--color-number);
   font-size: 48px;
