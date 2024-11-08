@@ -5,4 +5,11 @@ import pluginJs from "@eslint/js";
 export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
+  {
+    rules: {
+     "no-console": "warn", 
+     "no-unused-vars": "warn", 
+     "quotes": ["error", "double"], // Используйте двойные кавычки
+    }
+   }
 ];
