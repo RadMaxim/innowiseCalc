@@ -1,26 +1,35 @@
 {
+  
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write .",
     "pre-commit": "npm run lint -- --fix && npm run format",
     "lint-staged": "lint-staged",
-    "build":"webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.(js)": ["npm run lint:write", "git add"]
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^9.14.0",
     "globals": "^15.12.0",
+    "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.6",
     "prettier": "^3.3.3"
   },
   "dependencies": {
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.0",
     "lint-staged": "^15.2.10",
+    "style-loader": "^4.0.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
   }
