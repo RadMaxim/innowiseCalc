@@ -1,38 +1,52 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 
-module.exports={
-    mode:"production",
-    entry:{
-        filename:path.resolve(__dirname,"src/index.js") ,
+module.exports = (env) => {
+  return {
+    devtool: false,
+    // devtool: 'source-map',
+    mode: env.mode??"production",
+    entry: {
+      filename: path.resolve(__dirname, "src/index.js"),
     },
-    output:{
-        path:path.resolve(__dirname,'dist'),
-        filename:"index.js"
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "index.js",
+      clean: true,
+    },
+    
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        open: true, 
+        port: 8080,
+        hot: true,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./index.html"),
-            filename: "index.html",
-        }),
-        new CleanWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new Dotenv(),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "./src/index.html"),
+        filename: "index.html",
+        minify: true
+      }),
+      env.mode && new CleanWebpackPlugin(),
+      new Dotenv(),
     ],
     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: ["babel-loader"],
+      rules: [
+        {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader', // Позволяет использовать современные JS фичи
             },
-            {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
-        ],
+        }
+       
+      ],
     },
-}
+  };
+};

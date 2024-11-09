@@ -1,4 +1,4 @@
-import "./../index.css"
+import "./index.css";
 import { appNumber } from "./js/appendNumber.js";
 import { calculate } from "./js/calculate.js";
 import { checkOperation } from "./js/checkOperation.js";
@@ -6,6 +6,7 @@ import { clearOperations } from "./js/clear.js";
 import { allState, updateStates } from "./js/states.js";
 import { updateScreen } from "./js/updateScreen.js";
 window.addEventListener("load", () => {
+
   let btns = document.querySelectorAll("[aria-n]");
   let operations = document.querySelectorAll("[aria-o]");
   let equalsBtn = document.querySelector("[aria-equals]");

@@ -7,9 +7,9 @@ export default [
   pluginJs.configs.recommended,
   {
     rules: {
-     "no-console": "warn", 
-     "no-unused-vars": "warn", 
-     "quotes": ["error", "double"], // Используйте двойные кавычки
-    }
-   }
+      "no-console": "warn",
+      "no-unused-vars": "warn",
+      quotes: ["error", "double"], // Используйте двойные кавычки
+    },
+  },
 ];
