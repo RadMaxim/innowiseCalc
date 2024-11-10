@@ -60,6 +60,8 @@ Cодержит все зависимости проектаи.
 #### `eslint.config.mjs`
 
 это файл конфигурации для ESLint.
+ 
+![calculator](./src/img/image.png)
 
 ### [Деплой приложения](https://clever-starburst-191070.netlify.app/)
 
