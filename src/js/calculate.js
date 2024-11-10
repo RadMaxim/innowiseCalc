@@ -18,7 +18,7 @@ function calculate() {
       reasult = prev / current;
       break;
     case "%":
-      reasult = prev % current;
+      reasult = (prev/100)*current;
       break;
     case "*":
       reasult = prev * current;
