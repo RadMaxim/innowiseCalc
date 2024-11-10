@@ -63,7 +63,7 @@ Cодержит все зависимости проектаи.
  
 ![calculator](./src/img/image.png)
 
-### [Деплой приложения](https://visionary-liger-dcf2e3.netlify.app/)
+### [Деплой приложения](https://cosmic-sunflower-40f91f.netlify.app/)
 
 
 
