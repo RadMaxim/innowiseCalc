@@ -63,7 +63,7 @@ Cодержит все зависимости проектаи.
  
 ![calculator](./src/img/image.png)
 
-### [Деплой приложения](https://clever-starburst-191070.netlify.app/)
+### [Деплой приложения](https://visionary-liger-dcf2e3.netlify.app/)
 
 
 
