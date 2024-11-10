@@ -307,3 +307,19 @@ footer > p {
   font-size: 10px;
   padding: 0;
 }
+#loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--color-number);
+  z-index: 1;
+}
+#loading p{
+   user-select: none;
+}
