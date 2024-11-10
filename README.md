@@ -63,7 +63,7 @@ Cодержит все зависимости проектаи.
  
 ![calculator](./src/img/image.png)
 
-### [Деплой приложения](https://cosmic-sunflower-40f91f.netlify.app/)
+### [Деплой приложения](https://gorgeous-salamander-2e3690.netlify.app/)
 
 
 
