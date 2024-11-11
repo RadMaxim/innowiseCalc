@@ -4,9 +4,7 @@ function calculate() {
   let reasult = 0;
   let prev = parseFloat(allState.prevOperation.replaceAll(",", "."));
   let current = parseFloat(allState.currentOp.replaceAll(",", "."));
-  console.log('sdf');
-  
-  console.log('sdf');
+
   if (isNaN(prev) || isNaN(current)) {
     return;
   }

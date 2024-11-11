@@ -8,9 +8,9 @@
     "build:prod": "webpack --env  mode=production"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run lint",
+    "src/*.js": [
       "npm run format",
+      "npm run lint",
       "git add ."
     ]
   },
