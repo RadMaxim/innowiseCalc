@@ -4,7 +4,6 @@ let allState = {
   prevOperation: "",
 };
 function updateStates(newStates) {
-  
   allState = { ...allState, ...newStates };
 }
 export { updateStates, allState };

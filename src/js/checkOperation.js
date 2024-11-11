@@ -2,7 +2,6 @@ import { calculate } from "./calculate.js";
 import { allState, updateStates } from "./states.js";
 
 function checkOperation(operation) {
-
   if (allState.currentOp === "") {
     return;
   }
