@@ -26,12 +26,12 @@
 "build:dev": "webpack --env  mode=development",
 ```
 
-### pre-commit,
+### lint-staged
 
 будет выполняться перед каждым коммитом в Git.
 
 ```json
-"pre-commit": "npm run lint -- --fix && npm run format",
+ "lint-staged": "npx lint-staged",
 ```
 
 ## Структура проекта
