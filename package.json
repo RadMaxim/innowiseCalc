@@ -19,7 +19,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  
   "devDependencies": {
     "@eslint/js": "^9.14.0",
     "clean-webpack-plugin": "^4.0.0",

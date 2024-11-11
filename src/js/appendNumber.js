@@ -12,6 +12,6 @@ function appNumber(num) {
   }
   allState.currentOp += num;
   updateStates({ currentOp: allState.currentOp });
-  console.log(sef);
+
 }
 export { appNumber };

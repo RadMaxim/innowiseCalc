@@ -13,7 +13,6 @@ function updateScreen() {
   } else if (currentText.length > 8) {
     res.style.fontSize = "26px";
   } else {
-    console.log(currentText);
     res.style.fontSize = "48px";
   }
   res.innerText = allState.currentOp;
