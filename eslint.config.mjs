@@ -8,8 +8,8 @@ export default [
   {
     rules: {
       "no-console": "warn",
-      "no-unused-vars": "warn",
-      quotes: ["error", "double"],
+      // "no-unused-vars": "warn",
+      // quotes: ["error", "double"],
     },
   },
 ];
