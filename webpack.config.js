@@ -7,7 +7,7 @@ module.exports = (env) => {
   return {
     devtool: false,
     // devtool: 'source-map',
-    mode: env.mode??"production",
+    mode: env.mode ?? "production",
     entry: {
       filename: path.resolve(__dirname, "src/index.js"),
     },
@@ -16,18 +16,18 @@ module.exports = (env) => {
       filename: "index.js",
       clean: true,
     },
-    
+
     devServer: {
-        static: path.join(__dirname, 'dist'),
-        open: true, 
-        port: 8080,
-        hot: true,
+      static: path.join(__dirname, "dist"),
+      open: true,
+      port: 8080,
+      hot: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "./src/index.html"),
         filename: "index.html",
-        minify: true
+        minify: true,
       }),
       env.mode && new CleanWebpackPlugin(),
       new Dotenv(),
@@ -35,17 +35,16 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
-          },
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
         {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader', // Позволяет использовать современные JS фичи
-            },
-        }
-       
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader", // Позволяет использовать современные JS фичи
+          },
+        },
       ],
     },
   };

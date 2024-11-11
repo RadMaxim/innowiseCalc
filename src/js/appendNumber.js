@@ -7,8 +7,8 @@ function appNumber(num) {
 
   if (allState.currentOp === "0" && num == ",")
     updateStates({ currentOp: "0" });
-  if ((allState.currentOp+num).length>25) {
-    return
+  if ((allState.currentOp + num).length > 25) {
+    return;
   }
   allState.currentOp += num;
   updateStates({ currentOp: allState.currentOp });
