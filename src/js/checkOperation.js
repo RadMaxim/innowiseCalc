@@ -3,7 +3,6 @@ import { allState, updateStates } from "./states.js";
 
 function checkOperation(operation) {
 
-
   if (allState.currentOp === "") {
     return;
   }

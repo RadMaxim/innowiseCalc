@@ -3,7 +3,7 @@
     "start": "webpack serve --open",
     "lint": "npx eslint . --fix",
     "format": "prettier --write .",
-    "lint-staged": "lint-staged",
+    "lint-staged": "npx lint-staged",
     "build:dev": "webpack --env  mode=development",
     "build:prod": "webpack --env  mode=production"
   },

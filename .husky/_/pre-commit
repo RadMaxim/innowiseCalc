@@ -1,2 +1,5 @@
-echo "Running lint-staged..."
-npm run lint-staged
+#!/bin/sh
+. "$(dirname "$0")/husky.sh"
+
+
+npx lint-staged
