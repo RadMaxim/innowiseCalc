@@ -4,7 +4,8 @@ function calculate() {
   let reasult = 0;
   let prev = parseFloat(allState.prevOperation.replaceAll(",", "."));
   let current = parseFloat(allState.currentOp.replaceAll(",", "."));
-
+  console.log('wefwfe');
+  
   if (isNaN(prev) || isNaN(current)) {
     return;
   }
