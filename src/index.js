@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   let load = document.getElementById("loading");
   load.style.display = "none";
   console.log(load);
-
+  log
   let btns = document.querySelectorAll("[aria-n]");
   let operations = document.querySelectorAll("[aria-o]");
   let equalsBtn = document.querySelector("[aria-equals]");
