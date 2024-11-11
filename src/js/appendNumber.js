@@ -2,8 +2,6 @@ import { allState, updateStates } from "./states.js";
 
 function appNumber(num) {
   if (num === "," && allState.currentOp.indexOf(",") > -1) return;
-wefwf
-console.log(wefg);
 
   if (allState.currentOp === "0" && num != ",") updateStates({ currentOp: "" });
 
