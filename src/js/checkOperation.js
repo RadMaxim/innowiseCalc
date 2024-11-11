@@ -5,8 +5,9 @@ function checkOperation(operation) {
   if (allState.currentOp === "") {
     return;
   }
-  if (allState.prevOperation !== "") {
+  if (allState.prevOperation !== '') {
     calculate();
+    dd
   }
   updateStates({
     operation: operation,
