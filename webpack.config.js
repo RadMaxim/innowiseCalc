@@ -42,7 +42,7 @@ module.exports = (env) => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader", // Позволяет использовать современные JS фичи
+            loader: "babel-loader",
           },
         },
       ],

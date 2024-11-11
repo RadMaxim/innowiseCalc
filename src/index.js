@@ -8,7 +8,6 @@ import { updateScreen } from "./js/updateScreen.js";
 window.addEventListener("load", () => {
   let load = document.getElementById("loading");
   load.style.display = "none";
-  console.log("wef");
 
   let btns = document.querySelectorAll("[aria-n]");
   let operations = document.querySelectorAll("[aria-o]");

@@ -9,16 +9,15 @@ export default [
 
   pluginJs.configs.recommended,
 
-
   {
-    files: ["src/**/*.js"], 
+    files: ["src/**/*.js"],
     rules: {
-      "no-console": "warn", 
-      "no-unused-vars": "warn", 
-      quotes: ["error", "double"]
-    }
+      "no-console": "warn",
+      "no-unused-vars": "warn",
+      quotes: ["error", "double"],
+    },
   },
   {
-    ignores: ["node_modules/**", "dist/**", "webpack.config.js"]
-  }
+    ignores: ["node_modules/**", "dist/**", "webpack.config.js"],
+  },
 ];
