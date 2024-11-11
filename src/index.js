@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
     updateStates({ currentOp: String(parseFloat(allState.currentOp) * -1) });
     updateScreen();
   });
-  clearOperation.addEventListener('click', () => {
+  clearOperation.addEventListener("click", () => {
     clearOperations();
     updateScreen();
   });

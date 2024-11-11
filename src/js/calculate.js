@@ -29,6 +29,7 @@ function calculate() {
   }
   console.log("we");
   console.log("we");
+  console.log("we");
   updateStates({
     currentOp: reasult % 1 == 0 ? reasult.toFixed(0) : reasult.toFixed(5),
     operation: "",
